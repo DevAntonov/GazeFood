@@ -1,0 +1,202 @@
+/* 
+Navigation -> line 45 (Home, Gallery, About)
+Top section -> line 72 (Home)
+Boxes section -> line 140 (Home, Gallery)
+Footer -> line 183 (Home, Gallery, About)
+*/
+
+/* CSS Variables */
+:root {
+    --base: #e6e6e6;
+    --dark: rgb(51, 51, 51);
+    --white: #ffffff;
+    --blue: #055C9D;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+/*  */
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.btn {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Navigation */
+
+.navigation ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navigation a {
+    background: var(--base);
+    display: block;
+    text-decoration: none;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+}
+
+.navigation a:hover {
+    background: var(--dark);
+    color: var(--white);
+}
+
+/* Top section */
+
+.top-section {
+    display: grid;
+    grid-gap: 20px;   
+    grid-template-areas: 
+        'showcase showcase top-box-1'
+        'showcase showcase top-box-2';
+}
+
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(../img/table-top-section.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--white);
+}
+
+.showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--white);
+}
+
+.top-box {
+    color: var(--white);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.top-box h4 {
+    font-size: 1.5rem;
+}
+
+.top-box .price {
+    font-size: 2.5rem;
+}
+
+.top-box-1 {
+    background: url(../img/top-box-1.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: top-box-1;
+}
+
+.top-box-2 {
+    background: url(../img/top-box-2.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: top-box-2;
+}
+
+/* Boxes section */
+
+.boxes-section {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: 1.5rem;
+}
+
+.box {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+    text-decoration-line: none;
+}
+
+.box h3 {
+    color: var(--white);
+}
+
+.box-pizza {
+    background: url(../img/pizza-box.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-pasta {
+    background: url(../img/pasta-box.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-mg {
+    background: url(../img/mixed-grill-box.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-dessert {
+    background: url(../img/dessert-box.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-us {
+    background: var(--base);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
