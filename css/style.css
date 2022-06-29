@@ -11,6 +11,7 @@ Footer -> line 183 (Home, Gallery, About)
     --dark: rgb(51, 51, 51);
     --white: #ffffff;
     --blue: #055C9D;
+    --purple: #800080;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
@@ -140,7 +141,7 @@ img {
     grid-area: top-box-2;
 }
 
-/* Boxes section */
+/* Boxes section (Home, Gallery)*/
 
 .boxes-section {
     display: grid;
@@ -154,9 +155,6 @@ img {
     padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
     text-decoration-line: none;
-}
-
-.box h3 {
     color: var(--white);
 }
 
@@ -184,11 +182,90 @@ img {
     background-position: center;
 }
 
-
+/* about us section */
 .about-us {
     background: var(--base);
     box-shadow: var(--shadow);
     padding: 1rem;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Boxes section in gallery */
+
+.b-pz-glry {
+    text-decoration-line: none;
+}
+
+.b-ps-glry {
+    text-decoration-line: none;
+}
+
+.b-mg-glry {
+    text-decoration-line: none;
+}
+
+.b-d-glry {
+    text-decoration-line: none;
+}
+
+.b-pz-glry:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--white);
+}
+
+.b-ps-glry:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--white);
+}
+
+.b-mg-glry:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--white);
+}
+
+.b-d-glry:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--white);
+}
+
+/* photos section */
+.photos-section{
+    background: var(--base);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.photos-section h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pizza-photos {
+    display: none;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.pasta-photos {
+    display: none;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.mg-photos {
+    display: none;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.dessert-photos {
+    display: none;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 /* Footer */
